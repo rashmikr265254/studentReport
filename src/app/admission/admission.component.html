@@ -1,0 +1,38 @@
+<form>
+    <div>
+        <span>
+            Name
+        </span>
+        <input type="text" name="name" [(ngModel)]="name" (ngModelChange)="validateForm()">
+    </div>
+    <div>
+        <span>
+            Last Name
+        </span>
+        <input type= "text" name="last" [(ngModel)]="last" (ngModelChange)="validateForm()">
+    </div>
+    <div>
+        <span>
+            Class
+        </span>
+        <input type= "text" name="class" [(ngModel)]="class" (ngModelChange)="validateForm()">
+    </div>
+    <div>
+        <span>
+            Year of passing
+        </span>
+        <input type= "number" name="year" [(ngModel)]="year" (ngModelChange)="validateForm()">
+    </div>
+    <div>
+        <span>
+            Percentage of marks
+        </span>
+        <input type= "number" name="percentage" [(ngModel)]="percentage" (ngModelChange)="validateForm()">
+    </div>
+    <div>
+        Button is {{ !isBtnDisable ? 'shown': 'hidden' }}
+        <button *ngIf="!isBtnDisable">
+            Submit
+        </button>
+    </div>
+</form>

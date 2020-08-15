@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    table {
+        border-collapse: collapse;
+        border: 1px solid black;
+        th {
+            text-align: left;
+        }
+        tr.header-row {
+            font-style: italic;
+        
+        }
+        td, th {
+            border: 1px solid black;
+            min-width: 100px;
+        }
+        .student-name:first-letter{
+            text-transform: capitalize
+        }
+        tr {
+            &.Fail {
+                color: red;
+            }
+            &.Topper {
+                color: green;
+            }
+        }
+    }
+}

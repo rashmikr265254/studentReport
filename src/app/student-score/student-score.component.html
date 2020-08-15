@@ -1,0 +1,37 @@
+<div class= "container">
+    <table>
+        <tr>
+            <th class="header" colspan="4">
+                Students Result Board
+            </th>
+        </tr>
+        <tr class="header-row">
+            <th>
+                Student Name
+            </th>
+            <th>
+                Roll Number
+            </th>
+            <th>
+                Total Marks
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+        <tr class= "{{ row.status }}" *ngFor = "let row of studentScores">
+            <td class= "student-name">
+                {{ row.name }}
+            </td>
+            <td>
+                {{ row.rollNumber }}
+            </td>
+            <td class = "total">
+                {{ row.total }}
+            </td>
+            <td>
+                {{ row.status }}
+            </td>
+        </tr>
+    </table>
+</div>
